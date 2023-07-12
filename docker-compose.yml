@@ -1,0 +1,13 @@
+services:
+  blocks:
+     image: blocks:latest
+     init: true
+     network_mode: bridge
+     ports:
+       - 8080:8080
+     volumes:
+        - /home/myuser/blocks-home:/home/blocks
+     environment:
+       - USERID=1000
+       - LICENSE_SERVER=10.0.1.229
+       - TZ=Europe/Stockholm
